@@ -5,6 +5,7 @@ package fsm
 import (
 	"errors"
 	"fmt"
+	"sort"
 	"strings"
 )
 
@@ -94,6 +95,7 @@ func (d *Definition) Terminals() []string {
 			out = append(out, s)
 		}
 	}
+	sort.Strings(out)
 	return out
 }
 
